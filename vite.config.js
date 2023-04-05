@@ -8,6 +8,7 @@ export default defineConfig({
       formats: ['es'],
       name: 'GoatComponents',
       fileName: 'goat-components',
+      
     },
     rollupOptions: {
       external: /^lit/,
