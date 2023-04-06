@@ -4,11 +4,11 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/components/main.js',
+      entry: 'src/components/main.ts',
       formats: ['es'],
       name: 'GoatComponents',
       fileName: 'goat-components',
-      
+
     },
     rollupOptions: {
       external: /^lit/,

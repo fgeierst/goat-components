@@ -8,7 +8,7 @@
 		--_color-text: var(--color-text, black);
 		--_color-background: var(--color-background, white);
 		--_translateX: var(--translateX, 0);
-		--_translateY: var(--translateY, 100%);
+		--_translateY: var(--translateY, -100%);
 
 		position: relative;
 	}
@@ -27,7 +27,6 @@
 	.clipbox__panel {
 		transition: transform var(--_transition-duration) cubic-bezier(0.77, 0, 0.175, 1);
 		background-color: var(--_color-background);
-		background-color: pink;
 
 		[aria-expanded='false'] + .clipbox > & {
 			transform: translate(var(--_translateX), var(--_translateY));
@@ -55,20 +54,21 @@
 
 		&::before {
 			top: 18px;
+		}
 
-			&[aria-expanded='true'] {
-				top: calc(50% - 3px / 2);
-				transform: rotate(-45deg);
-			}
+		&[aria-expanded="true"]::before {
+			top: calc(50% - 3px / 2);
+			transform: rotate(-45deg);
 		}
 
 		&::after {
 			bottom: 18px;
 
-			&[aria-expanded='true'] {
-				top: calc(50% - 3px / 2);
-				transform: rotate(45deg);
-			}
+		}
+
+		&[aria-expanded="true"]::after {
+			top: calc(50% - 3px / 2);
+			transform: rotate(45deg);
 		}
 	}
 
