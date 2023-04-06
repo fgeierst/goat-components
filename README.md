@@ -11,21 +11,21 @@ pnpm add goat-components
 ## Usage
 
 ```html 
-<goat-slideout-panel buttonLabel="Main menu">
+<goat-slideout buttonLabel="Main menu" hamburgerIcon>
 	<ul>
 		<li><a href="#">Home</a></li>
 		<li><a href="#">About</a></li>
 	</ul>
-</goat-slideout-panel>
+</goat-slideout>
 
 <script type="module">
-	import { GoatSlideoutPanel } from 'goat-components';
+	import { GoatSlideout } from 'goat-components';
 </script>
 ```
 
 ## Components 
 
-## Slideout Panel
+## Slideout
 
 ```html 
 <goat-slideout-panel buttonLabel="Main menu">

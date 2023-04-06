@@ -3,7 +3,7 @@
   "description": "Goat Components",
   "author": "Florian Geierstanger",
   "repository": "https://github.com/fgeierst/goat-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "dist/goat-components.js",
   "module": "dist/goat-components.js",
@@ -21,6 +21,8 @@
     "lit": "^2.7.1"
   },
   "devDependencies": {
+    "sass": "^1.60.0",
+    "typescript": "^5.0.3",
     "vite": "^4.2.1"
   }
 }
