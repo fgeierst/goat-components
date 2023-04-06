@@ -2,4 +2,8 @@
   "compilerOptions": {
     "experimentalDecorators": true,
   },
+  "include": [
+    "src/**/*.ts",
+    "typings/*.d.ts"
+  ],
 }
