@@ -12,7 +12,13 @@ export class GoatSlideoutPanel extends LitElement {
       /**
        * Label for the disclosure button
        */
-      buttonLabel: { type: String },
+			buttonLabel: { type: String, default: 'Menu' },
+
+      /**
+       * aria-expanded state
+       */
+			expanded: { type: Boolean, default: false },
+			
     }
   }
 
@@ -20,26 +26,36 @@ export class GoatSlideoutPanel extends LitElement {
     super()
   }
 
+	/**
+ 	* Markup
+ 	*/
   render() {
     return html`
-			<button @click=${this._onClick} part="button">
+			<button aria-expanded=${this.expanded} @click=${this._onClick} part="button">
 				${this.buttonLabel}
 			</button>
       <slot></slot>
     `
   }
 
-  _onClick() {
-		console.log('clicked');
-  }
-
+	/**
+ 	* Styling
+ 	*/
   static get styles() {
-    return css`
-      :host {
-				background-color: pink;
-      }
+		return css`
+		:host {
+			background-color: pink;
+		}
     `
-  }
+	}
+	
+	/**
+ 	* Click event handler
+ 	*/
+	_onClick() {
+		this.expanded = !this.expanded;
+		console.log('clicked');
+	}
 }
 
 window.customElements.define('goat-slideout-panel', GoatSlideoutPanel)
