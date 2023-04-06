@@ -6,9 +6,9 @@ body {
   margin: 0;
 }
 
-/* goat-slideout-panel::part(clipbox) {
+/* goat-slideout::part(clipbox) {
   top:0;
 }
-goat-slideout-panel::part(panel) {
+goat-slideout::part(panel) {
   padding: 2rem 1rem;
 } */
