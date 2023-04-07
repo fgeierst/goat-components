@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { settings } from '../settings'
-import style from './Slideout.scss?inline';
+import style from './slideout.scss?inline';
 
 @customElement(`${settings.prefix}-slideout`)
 export class Slideout extends LitElement {

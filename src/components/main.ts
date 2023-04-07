@@ -1,3 +1,3 @@
-import { Slideout } from './Slideout/Slideout';
+import { Slideout } from './slideout/slideout';
 
 export { Slideout }

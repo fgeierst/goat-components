@@ -1,0 +1,38 @@
+.hamburger {
+	all: unset;
+	position: relative;
+	background-color: var(--_color-background);
+	width: 48px;
+	height: 48px;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		width: 24px;
+		height: 3px;
+		position: absolute;
+		left: 12px;
+		background-color: var(--_color-text);
+		transition: transform 0.2s;
+	}
+
+	&::before {
+		top: 18px;
+	}
+
+	&[aria-expanded="true"]::before {
+		top: calc(50% - 3px / 2);
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		bottom: 18px;
+
+	}
+
+	&[aria-expanded="true"]::after {
+		top: calc(50% - 3px / 2);
+		transform: rotate(45deg);
+	}
+}
