@@ -1,5 +1,5 @@
 import { LitElement, unsafeCSS, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { settings } from '../settings'
@@ -11,6 +11,7 @@ export class Slideout extends LitElement {
 	@property({ type: String }) buttonLabel = 'Menu';
 	@property({ type: Boolean, reflect: true }) expanded = false;
 	@property({ type: Boolean }) hamburgerIcon = false;
+	private _onEscapeKeyBound = null;
 
 	constructor() {
 		super()
@@ -35,12 +36,28 @@ export class Slideout extends LitElement {
 					<slot></slot>
 				</div>
 			</div>
-`
+		`;
+	}
+
+	_open() {
+		this.expanded = true;
+		this._onEscapeKeyBound = this._onEscapeKey.bind(this);
+		document.addEventListener('keydown', this._onEscapeKeyBound);
+	}
+
+	_close() {
+		this.expanded = false;
+		document.removeEventListener('keydown', this._onEscapeKeyBound);
 	}
 
 	_onClick() {
-		this.expanded = !this.expanded;
+		this.expanded ? this._close() : this._open();
+	}
+
+	_onEscapeKey(event: KeyboardEvent) {
+		if (event.key !== 'Escape') {
+			return;
+		}
+		this._close();
 	}
 }
-
-
