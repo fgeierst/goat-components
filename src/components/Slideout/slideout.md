@@ -1,6 +1,6 @@
 # Slideout
 
-
+The Slideout component is a UI element that remains hidden until a user triggers it by clicking a button. The panel slides out, revealing additional content. The component follows the *disclosure pattern*. 
 
 ## Examples
 
@@ -21,6 +21,9 @@
 	...
 </goat-slideout>
 ```
+
+See [code example on Codepen](https://codepen.io/fgeierst/pen/xxywpVY).
+
 
 ## Importing
 
