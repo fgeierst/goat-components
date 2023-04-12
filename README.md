@@ -19,7 +19,7 @@ npm install goat-components
 </goat-slideout>
 
 <script type="module">
-	import * as GoatSlideout from "https://cdn.skypack.dev/goat-components";
+	import { GoatSlideout } from 'goat-components';
 </script>
 ```
 
