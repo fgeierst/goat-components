@@ -5,7 +5,7 @@ Web components library build with Lit and Vite.
 ## Installation
 
 ```bash
-pnpm add goat-components
+npm install goat-components
 ```
 
 ## Usage
@@ -19,17 +19,12 @@ pnpm add goat-components
 </goat-slideout>
 
 <script type="module">
-	import { GoatSlideout } from 'goat-components';
+	import * as GoatSlideout from "https://cdn.skypack.dev/goat-components";
 </script>
 ```
 
 ## Components 
 
-## Slideout
+- [Slideout](https://github.com/fgeierst/goat-components/blob/main/src/components/Slideout/slideout.md)
 
-```html 
-<goat-slideout-panel buttonLabel="Main menu">
-	<!-- Panel content -->
-</goat-slideout-panel>
-```
 
