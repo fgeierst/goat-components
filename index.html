@@ -12,19 +12,63 @@
 <body>
   <h1>Goat Components</h1>
 
+  <h2>Slideout</h2>
   <goat-slideout buttonLabel="Main menu" hamburgerIcon>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi expedita hic ab repellat cupiditate odit quae
     illum voluptate rerum quis quod, animi recusandae libero ducimus reiciendis praesentium consequuntur aut sed.
   </goat-slideout>
 
-  <goat-slideout buttonLabel="Search">
-    <form>
-      <label>
-        Search
-        <input type="text">
-      </label>
-    </form>
-  </goat-slideout>
+  <h2>Searchable menu</h2>
+  <goat-searchable-menu></goat-searchable-menu>
+
+  <script>
+    const searchableMenu = document.querySelector('goat-searchable-menu');
+    searchableMenu.menu = {
+      id: 0,
+      label: 'Main menu',
+      items: [
+        {
+          id: 1,
+          label: 'Home',
+          href: '/',
+        },
+        {
+          id: 2,
+          label: 'About',
+          href: '/about',
+          items: [
+            {
+              id: 3,
+              label: 'Goat Components',
+              href: '/about/components',
+            },
+            {
+              id: 4,
+              label: 'Goat Libraries',
+              href: '/about/libraries',
+              items: [
+                {
+                  id: 5,
+                  label: 'West',
+                  href: '/about/libraries/west',
+                },
+                {
+                  id: 6,
+                  label: 'East',
+                  href: '/about/libraries/east',
+                }
+              ]
+            },
+          ]
+        },
+        {
+          id: 8,
+          label: 'Contact',
+          href: '/contact',
+        }
+      ]
+    }
+  </script>
 </body>
 
 </html>
