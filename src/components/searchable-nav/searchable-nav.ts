@@ -2,10 +2,10 @@ import { LitElement, unsafeCSS, html } from 'lit'
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { settings } from '../settings'
-import style from './searchable-menu.css?inline';
+import style from './searchable-nav.css?inline';
 
-@customElement(`${settings.prefix}-searchable-menu`)
-export class SearchableMenu extends LitElement {
+@customElement(`${settings.prefix}-searchable-nav`)
+export class SearchableNav extends LitElement {
 
 	@property({
 		attribute: false,
@@ -145,6 +145,4 @@ export class SearchableMenu extends LitElement {
 	switchTo(id: number) {
 		this._currentSubmenuId = id;
 	}
-
-
 }

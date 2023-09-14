@@ -1,4 +1,4 @@
 import { Slideout } from './slideout/slideout';
-import { SearchableMenu } from './searchable-menu/searchable-menu';
+import { SearchableNav } from './searchable-nav/searchable-nav';
 
-export { Slideout, SearchableMenu };
+export { Slideout, SearchableNav };
