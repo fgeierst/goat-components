@@ -1,7 +1,15 @@
 import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    transformer: 'lightningcss',
+    lightningcss: {
+      drafts: {
+        nesting: true,
+      }
+    },
+    devSourcemap: true,
+  },
   build: {
     lib: {
       entry: 'src/components/main.ts',

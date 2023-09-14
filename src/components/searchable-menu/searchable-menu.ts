@@ -2,7 +2,7 @@ import { LitElement, unsafeCSS, html } from 'lit'
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { settings } from '../settings'
-import style from './searchable-menu.scss?inline';
+import style from './searchable-menu.css?inline';
 
 @customElement(`${settings.prefix}-searchable-menu`)
 export class SearchableMenu extends LitElement {

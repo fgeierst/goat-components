@@ -1,4 +1,4 @@
-@use 'hamburger';
+@import url('hamburger.css');
 
 :host {
 	--_transition-duration: var(--transition-duration, .2s);
@@ -30,7 +30,7 @@
 	}
 }
 
-// Utilities
+/* Utilities */
 .visually-hidden {
 	position: absolute;
 	transform: scale(0);
