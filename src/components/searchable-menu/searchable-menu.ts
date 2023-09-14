@@ -100,7 +100,6 @@ export class SearchableMenu extends LitElement {
 	}
 
 	renderSearchResults() {
-		console.log(this.getItems(this.menu))
 		const filteredItems = this.getItems(this.menu).filter(item => {
 			return item.label.toLowerCase().startsWith(this._searchprompt.toLowerCase());
 		});

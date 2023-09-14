@@ -132,7 +132,6 @@ let u = class extends m {
     return n(e), t;
   }
   renderSearchResults() {
-    console.log(this.getItems(this.menu));
     const e = this.getItems(this.menu).filter((t) => t.label.toLowerCase().startsWith(this._searchprompt.toLowerCase()));
     return i`
 			<h2>Search Resuls</h2>
